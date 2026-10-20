@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio Carlos | Captação e Indicação Imobiliária - Imobiliária Pedro</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0F2C59',
+                            darkBlue: '#0A1E3F',
+                            green: '#10B981',
+                            greenHover: '#059669',
+                            gold: '#D97706',
+                            lightBg: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0F2C59 0%, #1E3A8A 100%);
+        }
+    </style>
+</head>
+<body class="bg-brand-lightBg text-slate-800 font-sans antialiased selection:bg-brand-green selection:text-white">
+
+    <!-- Configuração do Telefone e Nome -->
+    <script>
+        const PHONE_NUMBER = "5511950640669";
+        const CAPTADOR_NOME = "Antonio Carlos";
+    </script>
+
+    <!-- HEADER / NAVBAR COM O MENU -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo / Info -->
+            <div class="flex items-center gap-3">
+                <div class="bg-brand-blue text-white p-2.5 rounded-xl shadow-md">
+                    <i data-lucide="building-2" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-brand-blue leading-tight">Antonio Carlos</h1>
+                    <p class="text-xs text-slate-500 font-medium">Parceiro Imobiliária Pedro • Vila Luzita e Região</p>
+                </div>
+            </div>
+
+            <!-- Menu de Navegação Desktop -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-bold text-brand-blue border-b-2 border-brand-blue pb-1">Início</a>
+                <a href="catalogo.html" class="text-sm font-semibold text-slate-600 hover:text-brand-blue transition-colors">Catálogo</a>
+            </nav>
+
+            <!-- Action CTA Desktop -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://wa.me/5511950640669?text=Ol%C3%A1%2C%20Antonio!%20Gostaria%20de%20falar%20sobre%20um%20im%C3%B3vel." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-greenHover text-white px-5 py-2.5 rounded-xl font-semibold transition-all duration-200 shadow-sm hover:shadow-md">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    <span>Falar no WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Botão Menu Mobile -->
+            <div class="flex md:hidden items-center gap-2">
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 rounded-lg text-slate-600 hover:text-brand-blue hover:bg-slate-100 transition" aria-label="Abrir Menu">
+                    <i data-lucide="menu" class="w-6 h-6" id="menu-icon-open"></i>
+                    <i data-lucide="x" class="w-6 h-6 hidden" id="menu-icon-close"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-3">
+            <a href="index.html" class="block py-2 text-base font-bold text-brand-blue">Início</a>
+            <a href="catalogo.html" class="block py-2 text-base font-semibold text-slate-600 hover:text-brand-blue">Catálogo</a>
+            <a href="https://wa.me/5511950640669?text=Ol%C3%A1%2C%20Antonio!%20Gostaria%20de%20falar%20sobre%20um%20im%C3%B3vel." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="flex items-center justify-center gap-2 bg-brand-green text-white py-3 rounded-xl font-semibold w-full">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Falar no WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="gradient-bg text-white py-16 lg:py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left: Text & Pitch -->
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-amber-300 text-sm font-medium border border-white/10">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i>
+                        <span>Intermediação Segura em Santo André</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+                        Quer <span class="text-amber-400">vender, alugar</span> ou encontrar seu próximo imóvel?
+                    </h2>
+
+                    <p class="text-slate-200 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0">
+                        Faça sua indicação direta com <strong>Antonio Carlos</strong>. Conecto proprietários e compradores com toda a estrutura e tradição da <strong>Imobiliária Pedro</strong> em Vila Luzita e toda a região.
+                    </p>
+
+                    <!-- Trust Cards -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 text-left">
+                        <div class="bg-white/10 p-3.5 rounded-xl border border-white/10 backdrop-blur-sm">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-green mb-1"></i>
+                            <p class="text-xs font-semibold text-white">Avaliação Realista</p>
+                            <p class="text-[11px] text-slate-300">Valor justo de mercado</p>
+                        </div>
+                        <div class="bg-white/10 p-3.5 rounded-xl border border-white/10 backdrop-blur-sm">
+                            <i data-lucide="users" class="w-5 h-5 text-amber-400 mb-1"></i>
+                            <p class="text-xs font-semibold text-white">Clientes Ativos</p>
+                            <p class="text-[11px] text-slate-300">Compradores e locatários</p>
+                        </div>
+                        <div class="bg-white/10 p-3.5 rounded-xl border border-white/10 backdrop-blur-sm col-span-2 sm:col-span-1">
+                            <i data-lucide="file-check" class="w-5 h-5 text-blue-300 mb-1"></i>
+                            <p class="text-xs font-semibold text-white">Segurança Jurídica</p>
+                            <p class="text-[11px] text-slate-300">Suporte Imobiliária Pedro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Dynamic Form Container -->
+                <div class="lg:col-span-6">
+                    <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 text-slate-800 border border-slate-100">
+                        
+                        <!-- Form Tabs Switcher -->
+                        <div class="flex bg-slate-100 p-1.5 rounded-xl mb-6">
+                            <button id="tab-proprietario" onclick="switchTab('proprietario')" class="flex-1 py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 flex items-center justify-center gap-2 bg-brand-blue text-white shadow-sm">
+                                <i data-lucide="home" class="w-4 h-4"></i>
+                                <span>Quero Indicar / Cadastrar</span>
+                            </button>
+                            <button id="tab-interessado" onclick="switchTab('interessado')" class="flex-1 py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900">
+                                <i data-lucide="search" class="w-4 h-4"></i>
+                                <span>Quero Comprar / Alugar</span>
+                            </button>
+                        </div>
+
+                        <!-- FORM 1: PROPRIETÁRIO / INDICAÇÃO DE IMÓVEL -->
+                        <form id="form-proprietario" onsubmit="handleProprietarioSubmit(event)" class="space-y-4">
+                            <div class="border-b border-slate-100 pb-2 mb-2">
+                                <h3 class="font-bold text-slate-900 text-base">Cadastrar/Indicar Imóvel</h3>
+                                <p class="text-xs text-slate-500">Preencha os dados do imóvel e entrarei em contato.</p>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Seu Nome *</label>
+                                <input type="text" id="prop-nome" required placeholder="Ex: Maria da Silva" class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Seu WhatsApp *</label>
+                                    <input type="tel" id="prop-whats" required placeholder="(11) 99999-9999" class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Objetivo *</label>
+                                    <select id="prop-objetivo" required class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition bg-white">
+                                        <option value="Venda">Venda</option>
+                                        <option value="Aluguel">Aluguel</option>
+                                        <option value="Venda ou Aluguel">Venda ou Aluguel</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Tipo de Imóvel *</label>
+                                    <select id="prop-tipo" required class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition bg-white">
+                                        <option value="Casa">Casa</option>
+                                        <option value="Apartamento">Apartamento</option>
+                                        <option value="Sobrado">Sobrado</option>
+                                        <option value="Terreno">Terreno</option>
+                                        <option value="Comercial">Salão / Comercial</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Bairro / Localização *</label>
+                                    <input type="text" id="prop-bairro" required placeholder="Ex: Vila Luzita" class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Valor Estimado (R$)</label>
+                                    <input type="text" id="prop-valor" placeholder="Ex: 350.000 ou 1.800/mês" class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Você é o proprietário?</label>
+                                    <select id="prop-vinculo" class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition bg-white">
+                                        <option value="Sou o Proprietário">Sim, sou o proprietário</option>
+                                        <option value="Indicação de Amigo/Conhecido">Não, estou indicando um imóvel</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Detalhes Adicionais (opcional)</label>
+                                <textarea id="prop-detalhes" rows="2" placeholder="Ex: 2 quartos, garagem, aceita financiamento..." class="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 px-4 bg-brand-green hover:bg-brand-greenHover text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 group">
+                                <span>ENVIAR INDICAÇÃO VIA WHATSAPP</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                        </form>
+
+                        <!-- FORM 2: INTERESSADO EM COMPRAR / ALUGAR -->
+                        <form id="form-interessado" onsubmit="handleInteressadoSubmit(event)" class="space-y-4 hidden">
+                            <div class="border-b border-slate-100 pb-2 mb-2">
+                                <h3 class="font-bold text-slate-900 text-base">Encontrar Imóvel Ideal</h3>
+                                <p class="text-xs text-slate-500">Diga o que procura e mostraremos as opções disponíveis.</p>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Seu Nome *</label>
+                                <input type="text" id="int-nome" required placeholder="Ex: João Pedro" class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Seu WhatsApp *</label>
+                                    <input type="tel" id="int-whats" required placeholder="(11) 99999-9999" class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Interesse *</label>
+                                    <select id="int-objetivo" required class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition bg-white">
+                                        <option value="Comprar">Quero Comprar</option>
+                                        <option value="Alugar">Quero Alugar</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Tipo Desejado *</label>
+                                    <select id="int-tipo" required class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition bg-white">
+                                        <option value="Casa">Casa</option>
+                                        <option value="Apartamento">Apartamento</option>
+                                        <option value="Sobrado">Sobrado</option>
+                                        <option value="Terreno">Terreno</option>
+                                        <option value="Comercial">Comercial</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Bairro Preferido *</label>
+                                    <input type="text" id="int-bairro" required placeholder="Ex: Vila Luzita e arredores" class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Faixa de Orçamento / Valor Máximo</label>
+                                <input type="text" id="int-orcamento" placeholder="Ex: Até 300 mil ou até 1.500/mês" class="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">O que é indispensável? (opcional)</label>
+                                <textarea id="int-detalhes" rows="2" placeholder="Ex: Mínimo 2 dormitórios, garagem, quintal..." class="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 px-4 bg-brand-green hover:bg-brand-greenHover text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 group">
+                                <span>BUSCAR IMÓVEIS NO WHATSAPP</span>
+                                <i data-lucide="search" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA / PASSO A PASSO -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-blue mb-3">Como funciona o nosso atendimento?</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Agilidade, transparência e o suporte completo da Imobiliária Pedro em todas as etapas.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-brand-lightBg p-6 rounded-2xl border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 text-brand-blue font-bold text-xl rounded-xl flex items-center justify-center mb-4">1</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Envio das Informações</h3>
+                    <p class="text-slate-600 text-sm">Você cadastra o imóvel ou nos informa o perfil do imóvel que procura através do formulário acima.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-brand-lightBg p-6 rounded-2xl border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-800 font-bold text-xl rounded-xl flex items-center justify-center mb-4">2</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Análise e Vistoria</h3>
+                    <p class="text-slate-600 text-sm">Realizamos a avaliação do imóvel, alinhamos expectativas e organizamos fotos e documentação.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-brand-lightBg p-6 rounded-2xl border border-slate-100 hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 font-bold text-xl rounded-xl flex items-center justify-center mb-4">3</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Divulgação e Negócio</h3>
+                    <p class="text-slate-600 text-sm">O imóvel é promovido para a carteira de clientes com toda a segurança jurídica da Imobiliária Pedro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE O CAPTADOR E PARCERIA -->
+    <section class="py-16 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-800/80 rounded-3xl p-8 sm:p-12 border border-slate-700/50 flex flex-col lg:flex-row items-center gap-8 justify-between">
+                <div class="space-y-4 max-w-2xl text-center lg:text-left">
+                    <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Atendimento Local Personalizado</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold">Antonio Carlos & Imobiliária Pedro</h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Atuando fortemente na região de <strong>Vila Luzita e bairros vizinhos em Santo André</strong>. Nosso objetivo é facilitar a conexão entre quem deseja vender/alugar e quem procura um novo lar, garantindo contratos seguros, agilidade na avaliação e suporte do início ao fim.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+                    <a href="https://wa.me/5511950640669?text=Ol%C3%A1%2C%20Antonio!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20im%C3%B3veis." 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-greenHover text-white px-6 py-3.5 rounded-xl font-bold transition shadow-lg">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Falar no WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <p class="text-sm font-semibold text-white">Antonio Carlos - Captação Imobiliária</p>
+                <p class="text-xs text-slate-500 mt-0.5">Parceria com Imobiliária Pedro • Santo André - SP</p>
+            </div>
+            <div class="text-xs text-slate-500">
+                &copy; <script>document.write(new Date().getFullYear())</script> Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5511950640669?text=Ol%C3%A1%2C%20Antonio!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-brand-green text-white p-4 rounded-full shadow-2xl hover:scale-110 hover:bg-brand-greenHover transition-all duration-300 flex items-center justify-center group"
+       title="Falar com Antonio Carlos no WhatsApp">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 ease-in-out whitespace-nowrap text-xs font-bold pl-0 group-hover:pl-2">
+            Falar com Antonio
+        </span>
+    </a>
+
+    <!-- SCRIPT DE INTERAÇÃO -->
+    <script>
+        // Inicializar ícones do Lucide
+        lucide.createIcons();
+
+        // Toggle do Menu Mobile
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+            
+            menu.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        }
+
+        // Alternador de Abas do Formulário
+        function switchTab(tab) {
+            const btnProp = document.getElementById('tab-proprietario');
+            const btnInt = document.getElementById('tab-interessado');
+            const formProp = document.getElementById('form-proprietario');
+            const formInt = document.getElementById('form-interessado');
+
+            if (tab === 'proprietario') {
+                btnProp.className = "flex-1 py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 flex items-center justify-center gap-2 bg-brand-blue text-white shadow-sm";
+                btnInt.className = "flex-1 py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900";
+                formProp.classList.remove('hidden');
+                formInt.classList.add('hidden');
+            } else {
+                btnInt.className = "flex-1 py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 flex items-center justify-center gap-2 bg-brand-blue text-white shadow-sm";
+                btnProp.className = "flex-1 py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold transition-all duration-200 flex items-center justify-center gap-2 text-slate-600 hover:text-slate-900";
+                formInt.classList.remove('hidden');
+                formProp.classList.add('hidden');
+            }
+        }
+
+        // Handler Formulário Proprietário / Indicação
+        function handleProprietarioSubmit(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('prop-nome').value;
+            const whats = document.getElementById('prop-whats').value;
+            const objetivo = document.getElementById('prop-objetivo').value;
+            const tipo = document.getElementById('prop-tipo').value;
+            const bairro = document.getElementById('prop-bairro').value;
+            const valor = document.getElementById('prop-valor').value || 'Não informado';
+            const vinculo = document.getElementById('prop-vinculo').value;
+            const detalhes = document.getElementById('prop-detalhes').value || 'Nenhum detalhe adicional';
+
+            const message = `*NOVA INDICAÇÃO DE IMÓVEL*%0A%0A` +
+                            `*Atendimento:* Antonio Carlos (Imobiliária Pedro)%0A` +
+                            `*Nome:* ${nome}%0A` +
+                            `*Contato:* ${whats}%0A` +
+                            `*Vínculo:* ${vinculo}%0A` +
+                            `*Objetivo:* ${objetivo}%0A` +
+                            `*Tipo:* ${tipo}%0A` +
+                            `*Bairro/Local:* ${bairro}%0A` +
+                            `*Valor Estimado:* ${valor}%0A` +
+                            `*Observações:* ${detalhes}`;
+
+            window.open(`https://wa.me/${PHONE_NUMBER}?text=${message}`, '_blank');
+        }
+
+        // Handler Formulário Interessado / Busca
+        function handleInteressadoSubmit(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('int-nome').value;
+            const whats = document.getElementById('int-whats').value;
+            const objetivo = document.getElementById('int-objetivo').value;
+            const tipo = document.getElementById('int-tipo').value;
+            const bairro = document.getElementById('int-bairro').value;
+            const orcamento = document.getElementById('int-orcamento').value || 'Não informado';
+            const detalhes = document.getElementById('int-detalhes').value || 'Nenhum detalhe adicional';
+
+            const message = `*INTERESSE EM ENCONTRAR IMÓVEL*%0A%0A` +
+                            `*Atendimento:* Antonio Carlos (Imobiliária Pedro)%0A` +
+                            `*Nome:* ${nome}%0A` +
+                            `*Contato:* ${whats}%0A` +
+                            `*Interesse:* ${objetivo}%0A` +
+                            `*Tipo Desejado:* ${tipo}%0A` +
+                            `*Região/Bairro:* ${bairro}%0A` +
+                            `*Orçamento/Faixa:* ${orcamento}%0A` +
+                            `*Requisitos:* ${detalhes}`;
+
+            window.open(`https://wa.me/${PHONE_NUMBER}?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
